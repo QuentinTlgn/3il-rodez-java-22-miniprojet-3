@@ -1,58 +1,58 @@
-agenda : document que vous oubliez systÃ©matiquement de consulter jusqu'Ã  la veille des examens
-agile : processus de dÃ©veloppement oÃ¹ tout est possible, sauf les dÃ©lais
-algorithme : solution Ã©lÃ©gante Ã  un problÃ¨me que personne n'a jamais rencontrÃ©
-apÃ©ro : moment de dÃ©tente crucial pour Ã©vacuer le stress accumulÃ©
-bibliothÃ¨que : lieu oÃ¹ vous allez pour Ã©tudier, mais oÃ¹ vous finissez souvent par socialiser
-boucle : piÃ¨ge redoutable pour piÃ©ger les dÃ©veloppeurs novices
-bug : crÃ©ature insaisissable qui hante chaque projet de dÃ©veloppement
+agenda : document que vous oubliez systématiquement de consulter jusqu'à la veille des examens
+agile : processus de développement où tout est possible, sauf les délais
+algorithme : solution élégante à un problème que personne n'a jamais rencontré
+apéro : moment de détente crucial pour évacuer le stress accumulé
+bibliothèque : lieu où vous allez pour étudier, mais où vous finissez souvent par socialiser
+boucle : piège redoutable pour piéger les développeurs novices
+bug : créature insaisissable qui hante chaque projet de développement
 bug : erreur dans le code que personne n'a jamais commise
-cafÃ© : boisson magique qui fait fonctionner les programmeurs
-canard : animal sacrÃ© et vÃ©nÃ©rÃ© par une secte d'Ã©tudiants
+café : boisson magique qui fait fonctionner les programmeurs
+canard : animal sacré et vénéré par une secte d'étudiants
 classe : conteneur pour un ensemble complexe de bugs
-clavier : outil de combat du dÃ©veloppeur
-code : Ã©nigme que seul le dÃ©veloppeur peut rÃ©soudre
-commentaire : seul endroit oÃ¹ le code fonctionne toujours comme prÃ©vu
-commit : action courageuse de mettre en ligne du code non testÃ©
-compilation : processus oÃ¹ vos erreurs deviennent les erreurs du compilateur
-copie : activitÃ© pratiquÃ©e lorsqu'on est en panique totale
-copier-coller : mÃ©thode de programmation rapide et efficace
-deadline : moment magique oÃ¹ tout commence Ã  fonctionner
-dÃ©bogage : art subtil de faire fonctionner le code en essayant tout
-distraction : activitÃ© qui semble toujours plus attrayante que de rÃ©viser
+clavier : outil de combat du développeur
+code : énigme que seul le développeur peut résoudre
+commentaire : seul endroit où le code fonctionne toujours comme prévu
+commit : action courageuse de mettre en ligne du code non testé
+compilation : processus où vos erreurs deviennent les erreurs du compilateur
+copie : activité pratiquée lorsqu'on est en panique totale
+copier-coller : méthode de programmation rapide et efficace
+deadline : moment magique où tout commence à fonctionner
+débogage : art subtil de faire fonctionner le code en essayant tout
+distraction : activité qui semble toujours plus attrayante que de réviser
 documentation : ensemble de pages que personne ne lit
-eclipse : environnement de dÃ©veloppement qui semble Ãªtre en retard d'une dÃ©cennie
-exception : Ã©vÃ©nement inattendu qui survient lorsque vous pensez que tout va bien
-fonction : bloc de code conÃ§u pour crÃ©er des bugs de maniÃ¨re organisÃ©e
-framework : ensemble d'outils conÃ§us pour rendre la vie du dÃ©veloppeur plus compliquÃ©e
+eclipse : environnement de développement qui semble être en retard d'une décennie
+exception : événement inattendu qui survient lorsque vous pensez que tout va bien
+fonction : bloc de code conçu pour créer des bugs de manière organisée
+framework : ensemble d'outils conçus pour rendre la vie du développeur plus compliquée
 git : outil de gestion de code source qui peut parfois sembler magique
-groupe : occasion parfaite pour dÃ©couvrir que la procrastination est une compÃ©tence collective
-ide : environnement de dÃ©veloppement oÃ¹ les bugs se cachent dans les coins
-innovation : derniÃ¨re chose Ã  laquelle vous pensez quand vous Ãªtes en retard sur la deadline
+groupe : occasion parfaite pour découvrir que la procrastination est une compétence collective
+ide : environnement de développement où les bugs se cachent dans les coins
+innovation : dernière chose à laquelle vous pensez quand vous êtes en retard sur la deadline
 interface : abstraction magique qui promet beaucoup et livre peu
-itÃ©ration : cycle sans fin de dÃ©veloppement oÃ¹ chaque itÃ©ration devient une nouvelle phase
-javadoc : document de rÃ©fÃ©rence que personne ne prend le temps de gÃ©nÃ©rer
-java : langage de programmation objet ennemi des dÃ©butants
-matinÃ©e : tranquille moment oÃ¹ vous vous persuadez que vous avez encore le temps de tout faire
-maven : outil de construction conÃ§u pour rendre la vie des dÃ©veloppeurs plus difficile
-modularitÃ© : excuse utilisÃ©e pour justifier le manque de commentaires
-note : saint graal que tout Ã©tudiant cherche dÃ©sespÃ©rÃ©ment Ã  atteindre
-nuit : pÃ©riode de 24 heures oÃ¹ le cafÃ© devient votre meilleur ami
-objet : unitÃ© de base du dÃ©sordre dans la programmation orientÃ©e objet
-panne-de-rÃ©veil : situation oÃ¹ votre rÃ©veil dÃ©cide de faire grÃ¨ve au pire moment
-partiel : moment oÃ¹ vous rÃ©alisez que vous n'avez rien rÃ©visÃ©
-pause : moment de rÃ©pit nÃ©cessaire pour Ã©viter l'effondrement mental
-polymorphisme : concept qui rend le code plus Ã©lÃ©gant mais aussi plus difficile Ã  comprendre
-portabilitÃ© : qualitÃ© que personne ne teste jusqu'Ã  ce que le programme ne fonctionne pas sur un autre systÃ¨me
-procrastination : l'art de repousser les tÃ¢ches jusqu'Ã  la derniÃ¨re minute
-projet : chaos organisÃ© par un groupe d'Ã©tudiants dÃ©sespÃ©rÃ©s
-rattrapage : derniÃ¨re opportunitÃ© de sauver votre annÃ©e
-refactoring : activitÃ© pratiquÃ©e uniquement par les dÃ©veloppeurs courageux
-rÃ©gression : retour en arriÃ¨re inÃ©vitable aprÃ¨s chaque mise Ã  jour
-relecture : activitÃ© souvent nÃ©gligÃ©e qui rÃ©vÃ¨le toutes vos erreurs juste avant de rendre votre devoir
-rÃ©union : Ã©vÃ©nement oÃ¹ rien ne se passe mais tout le monde est prÃ©sent
-rÃ©vision : activitÃ© que vous prÃ©voyez de faire, mais qui se termine toujours par une sieste
-sÃ©curitÃ© : concept que personne ne prend au sÃ©rieux jusqu'Ã  ce qu'il soit trop tard
-stackoverflow : le saint graal des dÃ©veloppeurs en dÃ©tresse
-thread : unitÃ© de base de la procrastination concurrentielle
-variable : lieu de stockage temporaire pour vos espoirs et vos rÃªves
+itération : cycle sans fin de développement où chaque itération devient une nouvelle phase
+javadoc : document de référence que personne ne prend le temps de générer
+java : langage de programmation objet ennemi des débutants
+matinée : tranquille moment où vous vous persuadez que vous avez encore le temps de tout faire
+maven : outil de construction conçu pour rendre la vie des développeurs plus difficile
+modularité : excuse utilisée pour justifier le manque de commentaires
+note : saint graal que tout étudiant cherche désespérément à atteindre
+nuit : période de 24 heures où le café devient votre meilleur ami
+objet : unité de base du désordre dans la programmation orientée objet
+panne-de-réveil : situation où votre réveil décide de faire grève au pire moment
+partiel : moment où vous réalisez que vous n'avez rien révisé
+pause : moment de répit nécessaire pour éviter l'effondrement mental
+polymorphisme : concept qui rend le code plus élégant mais aussi plus difficile à comprendre
+portabilité : qualité que personne ne teste jusqu'à ce que le programme ne fonctionne pas sur un autre système
+procrastination : l'art de repousser les tâches jusqu'à la dernière minute
+projet : chaos organisé par un groupe d'étudiants désespérés
+rattrapage : dernière opportunité de sauver votre année
+refactoring : activité pratiquée uniquement par les développeurs courageux
+régression : retour en arrière inévitable après chaque mise à jour
+relecture : activité souvent négligée qui révèle toutes vos erreurs juste avant de rendre votre devoir
+réunion : événement où rien ne se passe mais tout le monde est présent
+révision : activité que vous prévoyez de faire, mais qui se termine toujours par une sieste
+sécurité : concept que personne ne prend au sérieux jusqu'à ce qu'il soit trop tard
+stackoverflow : le saint graal des développeurs en détresse
+thread : unité de base de la procrastination concurrentielle
+variable : lieu de stockage temporaire pour vos espoirs et vos rêves
 versioning : art de nommer les dossiers "final", "final_final" et "vraiment_le_dernier_final"
