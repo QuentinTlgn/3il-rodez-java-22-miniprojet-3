@@ -1,0 +1,3 @@
+Précision : 
+Pour la fonctionnalité "Vérification de la validité des entrées utilisateur (lettre de l'alphabet uniquement)", j'ai fais face à un problème d'encodage que je n'ai pas réussi à corriger. 
+Les caractères java étant encodés par défaut en UTF-16, cela cause des problèmes avec les caractères UTF-8, comme "é" ou "à". Ces caractères étant une combinaison de deux Octets, cela pose problème lors de la conversion en UTF-16
