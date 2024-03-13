@@ -1,5 +1,6 @@
 package fr.ecole3il.miniprojet3.Controleur;
 
+import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -43,8 +44,9 @@ public class PenduControleur implements ActionListener {
                     break;
                 case 3:
                     message = "Vos vies sont écoulées, partie terminée :(";
-                    vue.disableAllInputs();
+                    System.out.println(modele.getMotClair());
                     vue.setMot(modele.getMotClair());
+                    vue.disableAllInputs();
                     break;
                 case 4:
                     message = "L'entrée n'est pas une lettre";
@@ -57,7 +59,14 @@ public class PenduControleur implements ActionListener {
                     message = "Erreur interne :/";
                     break;
             }
-            vue.setMot(modele.getMot());
+            if(guess != 3)
+                vue.setMot(modele.getMot());
+            
+            Graphics g = vue.getGraphics();
+            if (g != null) {
+                vue.dessinerPendu(g);
+            }
+            //Implémenter méthode
             vue.setMessage(message);
         }
     }
