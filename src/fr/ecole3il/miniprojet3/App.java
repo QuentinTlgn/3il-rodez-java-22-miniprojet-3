@@ -6,7 +6,6 @@ import fr.ecole3il.miniprojet3.Vue.*;
 import fr.ecole3il.miniprojet3.Utils.FichierMotsHandler;
 
 import javax.swing.*;
-import java.awt.*;
 
 public class App {
     public static void main(String[] args) {
