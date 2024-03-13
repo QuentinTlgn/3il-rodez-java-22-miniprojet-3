@@ -3,6 +3,7 @@ package fr.ecole3il.miniprojet3;
 import fr.ecole3il.miniprojet3.Controleur.*;
 import fr.ecole3il.miniprojet3.Modele.*;
 import fr.ecole3il.miniprojet3.Vue.*;
+import fr.ecole3il.miniprojet3.Utils.FichierMotsHandler;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,9 +12,9 @@ public class App {
     public static void main(String[] args) {
         // Création d'une instance de modèle Pendu
 
-        //TODO génération du mot à ajouter avec l'utils
+        FichierMotsHandler handler = new FichierMotsHandler("./mots.txt");
 
-        Pendu modele = new Pendu("hello");
+        Pendu modele = new Pendu(handler.getMotAleatoire());
 
         // Création de l'instance de la vue PenduVue
         PenduVue vue = new PenduVue(modele);
