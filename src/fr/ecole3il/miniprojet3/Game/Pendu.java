@@ -12,18 +12,29 @@ import java.util.Set;
  */
 public class Pendu {
 
-    private List<Character> letters;
-    private Set<Character> guesses;
-    private int nombreEssais;
-    private boolean partieFinie;
+    private List<Character> letters; // List to store the letters of the word
+    private Set<Character> guesses; // Set to store the letters guessed by the player
+    private int nombreEssais; // Number of attempts made by the player
+    private boolean partieFinie; // Indicates if the game is over
 
+    /**
+     * Constructor for Pendu class.
+     *
+     * @param mot The word to be guessed.
+     */
     public Pendu(String mot) {
-        this.letters = initLetters(mot);
-        this.guesses = new HashSet<>();
-        this.nombreEssais = 0;
-        this.partieFinie = false;
+        this.letters = initLetters(mot); // Initialize the letters of the word
+        this.guesses = new HashSet<>(); // Initialize the set of guessed letters
+        this.nombreEssais = 0; // Initialize the number of attempts made
+        this.partieFinie = false; // Initialize the game state to not finished
     }
 
+    /**
+     * Initialize the letters of the word by filtering out non-letter characters.
+     *
+     * @param mot The word to be guessed.
+     * @return List of letters in the word.
+     */
     private List<Character> initLetters(String mot) {
         List<Character> originalLetters = new ArrayList<>();
         for (char c : mot.toCharArray()) {
@@ -34,6 +45,17 @@ public class Pendu {
         return originalLetters;
     }
 
+    /**
+     * Method for making a guess.
+     *
+     * @param lettre The letter guessed by the player.
+     * @return An integer representing the result of the guess:
+     *         0 if the letter was already guessed,
+     *         1 if the guess was correct,
+     *         2 if the guess was incorrect but the game continues,
+     *         3 if the guess was incorrect and the game is over,
+     *         4 if the input is not a letter.
+     */
     public int guess(char lettre) {
         if (Character.isLetter(lettre)) {
             lettre = Character.toLowerCase(lettre);
@@ -64,9 +86,9 @@ public class Pendu {
     }
 
     /**
-     * Donne le mot à deviner avec les lettres déjà trouvées.
+     * Get the word to be guessed with the letters already guessed filled in.
      *
-     * @return Le mot à deviner avec les lettres déjà trouvées.
+     * @return The word to be guessed with the letters already guessed filled in.
      */
     public String getMot() {
         StringBuilder motReconstruit = new StringBuilder();
@@ -81,9 +103,9 @@ public class Pendu {
     }
 
     /**
-     * Donne le mot à deviner.
+     * Get the original word to be guessed.
      *
-     * @return Le mot à deviner.
+     * @return The original word to be guessed.
      */
     public String getMotClair() {
         StringBuilder motReconstruit = new StringBuilder();
@@ -94,84 +116,29 @@ public class Pendu {
     }
 
     /**
-     * Donne le nombre d'essais effectués.
+     * Get the number of attempts made.
      *
-     * @return Le nombre d'essais effectués.
+     * @return The number of attempts made.
      */
     public int getNombreEssais() {
         return nombreEssais;
     }
 
     /**
-     * Donne les lettres déjà proposées.
+     * Get the set of letters already guessed.
      *
-     * @return Les lettres déjà proposées.
+     * @return The set of letters already guessed.
      */
     public Set<Character> getGuesses() {
         return guesses;
     }
 
     /**
-     * Indique si la partie est finie.
+     * Check if the game is over.
      *
-     * @return true si la partie est finie, false sinon.
+     * @return true if the game is over, false otherwise.
      */
     public boolean ispartieFinie() {
         return partieFinie;
-    }
-
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in, "UTF-8");
-
-        // Choisissez un mot à deviner
-        System.out.print("Entrez le mot à deviner : ");
-        String motADeviner = scanner.nextLine();
-
-        // Créez une instance de la classe Pendu
-        Pendu jeuPendu = new Pendu(motADeviner);
-
-        // Boucle principale du jeu
-        while (!jeuPendu.ispartieFinie()) {
-            // Affichez l'état actuel du mot à deviner
-            System.out.println("Mot actuel : " + jeuPendu.getMot());
-
-            // Affichez les lettres déjà proposées
-            System.out.println("Lettres proposées : " + jeuPendu.getGuesses());
-
-            // Demandez au joueur de deviner une lettre
-            System.out.print("Devinez une lettre : ");
-            char lettre = scanner.nextLine().toLowerCase().charAt(0);
-
-            System.out.println(lettre);
-
-            // Effectuez la tentative
-            int resultatTentative = jeuPendu.guess(lettre);
-
-            // Affichez le résultat de la tentative
-            switch (resultatTentative) {
-                case 0:
-                    System.out.println("Lettre déjà proposée. Essayez encore.");
-                    break;
-                case 1:
-                    System.out.println("Bonne devinette !");
-                    break;
-                case 2:
-                    System.out.println("Lettre incorrecte. Essais restants : " + (10 - jeuPendu.getNombreEssais()));
-                    break;
-                case 3:
-                    System.out.println(
-                            "Vous avez dépassé le nombre maximal d'essais. Le mot était : " + jeuPendu.getMotClair());
-                    break;
-                case 4:
-                    System.out.println("Entrée non valide. Veuillez entrer une lettre alphabétique.");
-                    break;
-                case 5:
-                    System.out.println("Félicitations ! Vous avez deviné le mot : " + jeuPendu.getMotClair());
-                    break;
-            }
-        }
-
-        // Fermez le scanner
-        scanner.close();
     }
 }
