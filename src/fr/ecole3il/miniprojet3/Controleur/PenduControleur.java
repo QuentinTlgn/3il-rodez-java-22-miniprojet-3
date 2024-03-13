@@ -46,7 +46,7 @@ public class PenduControleur implements ActionListener {
             Integer guess = modele.guess(enteredText.charAt(0));
 
             String message;
-            
+
             switch (guess) {
                 case 0:
                     message = "La lettre proposée a déjà été proposée";
@@ -94,7 +94,6 @@ public class PenduControleur implements ActionListener {
             vue.setHistoryLabel("");
             vue.getGuessField().setEnabled(true);
             vue.getSubmitButton().setEnabled(true);
-            vue.dessinerPendu(vue.getGraphics());
         }
     }
 }
