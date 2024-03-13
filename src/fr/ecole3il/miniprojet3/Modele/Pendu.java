@@ -76,7 +76,7 @@ public class Pendu {
             } else {
                 nombreEssais++;
                 System.out.println(nombreEssais);
-                if (nombreEssais >= 10) {
+                if (nombreEssais >= 8) {
                     partieFinie = true;
                     return 3;
                 } else {
