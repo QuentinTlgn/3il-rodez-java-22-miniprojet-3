@@ -13,7 +13,7 @@ public class Pendu {
 
     private List<Character> letters; // List to store the letters of the word
     private Set<Character> guesses; // Set to store the letters guessed by the player
-    private int nombreEssais =1; // Number of attempts made by the player
+    private int nombreEssais = 0; // Number of attempts made by the player
     private boolean partieFinie; // Indicates if the game is over
 
     /**
@@ -74,8 +74,9 @@ public class Pendu {
                 }
                 return 1;
             } else {
-                nombreEssais--;
-                if (nombreEssais <= 0) {
+                nombreEssais++;
+                System.out.println(nombreEssais);
+                if (nombreEssais >= 10) {
                     partieFinie = true;
                     return 3;
                 } else {
