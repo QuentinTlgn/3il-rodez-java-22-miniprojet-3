@@ -11,6 +11,7 @@ public class PenduVue extends JPanel {
     private JLabel motLabel;
     private JButton submitButton;
     private JLabel messageLabel;
+    private JLabel historyLabel;
 
     public PenduVue(Pendu modele) {
         this.modele = modele;
@@ -41,8 +42,13 @@ public class PenduVue extends JPanel {
         motLabel = new JLabel("");
         add(motLabel, gbc);
 
+        // Création du label pour afficher l'historique
+        gbc.gridy++;
+        historyLabel = new JLabel("Historique : ");
+        add(historyLabel, gbc);
+
         // Définition de la taille fixe
-        setPreferredSize(new Dimension(800, 300)); // Largeur: 500 pixels, Hauteur: 300 pixels
+        setPreferredSize(new Dimension(800, 300)); // Largeur: 800 pixels, Hauteur: 300 pixels
     }
 
     public JButton getSubmitButton() {
@@ -72,6 +78,14 @@ public class PenduVue extends JPanel {
     public void disableAllInputs() {
         submitButton.setEnabled(false);
         guessField.setEnabled(false);
+    }
+
+    public JLabel getHistoryLabel() {
+        return historyLabel;
+    }
+
+    public void setHistoryLabel(String history) {
+        historyLabel.setText("Historique : ["+history+"]");
     }
 
     @Override

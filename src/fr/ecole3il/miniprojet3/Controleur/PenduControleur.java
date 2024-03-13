@@ -3,6 +3,7 @@ package fr.ecole3il.miniprojet3.Controleur;
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Set;
 
 import fr.ecole3il.miniprojet3.Modele.Pendu;
 import fr.ecole3il.miniprojet3.Vue.PenduVue;
@@ -19,6 +20,17 @@ public class PenduControleur implements ActionListener {
 
         // Ajout de l'action listener au bouton
         vue.getSubmitButton().addActionListener(this);
+    }
+
+    private static String formatGuesses(Set<Character> guesses) {
+        StringBuilder builder = new StringBuilder();
+        for (char guess : guesses) {
+            if (builder.length() > 0) {
+                builder.append(", ");
+            }
+            builder.append(guess);
+        }
+        return builder.toString();
     }
 
     @Override
@@ -61,12 +73,13 @@ public class PenduControleur implements ActionListener {
             }
             if(guess != 3)
                 vue.setMot(modele.getMot());
+
+            vue.setHistoryLabel(formatGuesses(modele.getGuesses()));
             
             Graphics g = vue.getGraphics();
             if (g != null) {
                 vue.dessinerPendu(g);
             }
-            //Implémenter méthode
             vue.setMessage(message);
         }
     }
