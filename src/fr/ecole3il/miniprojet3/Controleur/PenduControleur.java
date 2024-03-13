@@ -14,6 +14,8 @@ public class PenduControleur implements ActionListener {
         this.modele = modele;
         this.vue = vue;
 
+        vue.setMot(modele.getMot());
+        
         // Ajout de l'action listener au bouton
         vue.getSubmitButton().addActionListener(this);
     }
