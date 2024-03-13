@@ -93,9 +93,9 @@ public class Pendu {
         StringBuilder motReconstruit = new StringBuilder();
         for (char c : letters) {
             if (Character.isLetter(c) && guesses.contains(Character.toLowerCase(c))) {
-                motReconstruit.append(c);
+                motReconstruit.append(c).append(' '); // Ajouter un espace après chaque lettre
             } else {
-                motReconstruit.append('_');
+                motReconstruit.append('_').append(' '); // Ajouter un espace après chaque espace '_' également
             }
         }
         return motReconstruit.toString();
