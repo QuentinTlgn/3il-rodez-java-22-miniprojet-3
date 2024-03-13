@@ -12,6 +12,7 @@ public class PenduVue extends JPanel {
     private JButton submitButton;
     private JLabel messageLabel;
     private JLabel historyLabel;
+    private JButton newGameButton;
 
     public PenduVue(Pendu modele) {
         this.modele = modele;
@@ -46,6 +47,12 @@ public class PenduVue extends JPanel {
         gbc.gridy++;
         historyLabel = new JLabel("Historique : ");
         add(historyLabel, gbc);
+
+        // Création du bouton pour commencer une nouvelle partie
+        gbc.gridy++;
+        newGameButton = new JButton("Nouvelle partie");
+        newGameButton.setVisible(false);
+        add(newGameButton, gbc);
 
         // Définition de la taille fixe
         setPreferredSize(new Dimension(800, 350)); // Largeur: 800 pixels, Hauteur: 300 pixels
@@ -85,7 +92,11 @@ public class PenduVue extends JPanel {
     }
 
     public void setHistoryLabel(String history) {
-        historyLabel.setText("Historique : ["+history+"]");
+        historyLabel.setText("Historique : [" + history + "]");
+    }
+
+    public JButton getNewGameButton() {
+        return newGameButton;
     }
 
     @Override
@@ -95,6 +106,14 @@ public class PenduVue extends JPanel {
     }
 
     public void dessinerPendu(Graphics g) {
+
+        // Efface le dessin précédent en remplissant le fond avec la couleur du fond
+        g.setColor(getBackground());
+        g.fillRect(0, 0, getWidth(), getHeight());
+        // Réinitialise la couleur à la couleur par défaut
+        g.setColor(getForeground());
+        repaint();
+
         Integer erreurs = modele.getNombreEssais();
         if (erreurs >= 1) {
             // Potence verticale
@@ -129,20 +148,5 @@ public class PenduVue extends JPanel {
             // Jambe droite
             g.drawLine(250, 250, 275, 300);
         }
-    }
-
-    public static void main(String[] args) {
-        // Création d'une instance de modèle Pendu
-        Pendu modele = new Pendu("hello");
-
-        // Création de l'instance de la vue PenduVue
-        PenduVue vue = new PenduVue(modele);
-
-        // Création de la fenêtre Swing pour afficher la vue
-        JFrame frame = new JFrame("Jeu du pendu");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.getContentPane().add(vue);
-        frame.pack();
-        frame.setVisible(true);
     }
 }

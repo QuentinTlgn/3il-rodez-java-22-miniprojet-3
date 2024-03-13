@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import java.util.Set;
 
 import fr.ecole3il.miniprojet3.Modele.Pendu;
+import fr.ecole3il.miniprojet3.Utils.FichierMotsHandler;
 import fr.ecole3il.miniprojet3.Vue.PenduVue;
 
 public class PenduControleur implements ActionListener {
@@ -20,6 +21,9 @@ public class PenduControleur implements ActionListener {
 
         // Ajout de l'action listener au bouton
         vue.getSubmitButton().addActionListener(this);
+
+        // Ajout de l'action listener au bouton "Nouvelle partie"
+        vue.getNewGameButton().addActionListener(this);
     }
 
     private static String formatGuesses(Set<Character> guesses) {
@@ -42,8 +46,7 @@ public class PenduControleur implements ActionListener {
             Integer guess = modele.guess(enteredText.charAt(0));
 
             String message;
-
-            System.out.println(guess);
+            
             switch (guess) {
                 case 0:
                     message = "La lettre proposée a déjà été proposée";
@@ -56,9 +59,9 @@ public class PenduControleur implements ActionListener {
                     break;
                 case 3:
                     message = "Vos vies sont écoulées, partie terminée :(";
-                    System.out.println(modele.getMotClair());
                     vue.setMot(modele.getMotClair());
                     vue.disableAllInputs();
+                    vue.getNewGameButton().setVisible(true);
                     break;
                 case 4:
                     message = "L'entrée n'est pas une lettre";
@@ -66,6 +69,7 @@ public class PenduControleur implements ActionListener {
                 case 5:
                     message = "Bien joué, vous avez trouvé le mot !";
                     vue.disableAllInputs();
+                    vue.getNewGameButton().setVisible(true);
                     break;
                 default:
                     message = "Erreur interne :/";
@@ -81,6 +85,16 @@ public class PenduControleur implements ActionListener {
                 vue.dessinerPendu(g);
             }
             vue.setMessage(message);
+        }
+        else if (e.getSource() == vue.getNewGameButton()) {
+            FichierMotsHandler handler = new FichierMotsHandler("./mots.txt");
+            this.modele = new Pendu(handler.getMotAleatoire());
+            vue.setMot(modele.getMot());
+            vue.setMessage("Faites votre premier guess");
+            vue.setHistoryLabel("");
+            vue.getGuessField().setEnabled(true);
+            vue.getSubmitButton().setEnabled(true);
+            vue.dessinerPendu(vue.getGraphics());
         }
     }
 }
