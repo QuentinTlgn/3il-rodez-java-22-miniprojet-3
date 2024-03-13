@@ -59,6 +59,16 @@ public class PenduVue extends JPanel {
         repaint();
     }
 
+    public void setMessage(String text){
+        messageLabel.setText(text);
+        repaint();
+    }
+
+    public void disableAllInputs(){
+        submitButton.setEnabled(false);
+        guessField.setEnabled(false);
+    }
+
     public static void main(String[] args) {
         // Création d'une instance de modèle Pendu
         Pendu modele = new Pendu("hello");
