@@ -10,6 +10,9 @@ import java.awt.*;
 public class App {
     public static void main(String[] args) {
         // Création d'une instance de modèle Pendu
+
+        //TODO génération du mot à ajouter avec l'utils
+
         Pendu modele = new Pendu("hello");
 
         // Création de l'instance de la vue PenduVue

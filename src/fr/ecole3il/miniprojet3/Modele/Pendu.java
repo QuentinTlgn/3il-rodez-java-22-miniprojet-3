@@ -54,7 +54,7 @@ public class Pendu {
      *         2 if the guess was incorrect but the game continues,
      *         3 if the guess was incorrect and the game is over,
      *         4 if the input is not a letter.
-     *         5 if the game is over
+     *         5 if win
      */
     public int guess(char lettre) {
         if(partieFinie)
@@ -75,7 +75,7 @@ public class Pendu {
                 return 1;
             } else {
                 nombreEssais--;
-                if (nombreEssais == 0) {
+                if (nombreEssais <= 0) {
                     partieFinie = true;
                     return 3;
                 } else {
