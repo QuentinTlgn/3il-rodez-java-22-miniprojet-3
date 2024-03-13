@@ -1,41 +1,31 @@
 package fr.ecole3il.miniprojet3.Controleur;
 
-import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import fr.ecole3il.miniprojet3.Modele.*;
-import fr.ecole3il.miniprojet3.Vue.*;
+import fr.ecole3il.miniprojet3.Modele.Pendu;
+import fr.ecole3il.miniprojet3.Vue.PenduVue;
 
-public class PenduControleur {
-    private PenduModele modele;
+public class PenduControleur implements ActionListener {
+    private Pendu modele;
     private PenduVue vue;
-    private JButton boutonChoixCouleur;
 
-    public PenduControleur(PenduModele modele, PenduVue vue, JButton boutonChoixCouleur) {
+    public PenduControleur(Pendu modele, PenduVue vue) {
         this.modele = modele;
         this.vue = vue;
 
-        this.boutonChoixCouleur = boutonChoixCouleur;
-
-        // Ajoute un écouteur au bouton pour gérer le choix de couleur
-        boutonChoixCouleur.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                choisirCouleur();
-            }
-        });
+        // Ajout de l'action listener au bouton
+        vue.getSubmitButton().addActionListener(this);
     }
 
-    // Méthode pour gérer le choix de couleur
-    private void choisirCouleur() {
-        // Utilisez JColorChooser pour permettre à l'utilisateur de choisir une couleur
-        Color nouvelleCouleur = JColorChooser.showDialog(null, "Choisir une couleur", modele.getCouleurTrait());
-
-        // Mettez à jour la couleur dans le modèle
-        if (nouvelleCouleur != null) {
-            modele.setCouleurTrait(nouvelleCouleur);
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == vue.getSubmitButton()) {
+            // Récupérer le texte entré dans le champ de saisie
+            String enteredText = vue.getEnteredText();
+            // Mettre à jour le label avec le texte récupéré
+            modele.guess(enteredText.charAt(0));
+            vue.setMot(modele.getMot());
         }
     }
 }
