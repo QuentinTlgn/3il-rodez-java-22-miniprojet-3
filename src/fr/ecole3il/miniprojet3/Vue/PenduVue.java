@@ -48,7 +48,7 @@ public class PenduVue extends JPanel {
         add(historyLabel, gbc);
 
         // Définition de la taille fixe
-        setPreferredSize(new Dimension(800, 300)); // Largeur: 800 pixels, Hauteur: 300 pixels
+        setPreferredSize(new Dimension(800, 350)); // Largeur: 800 pixels, Hauteur: 300 pixels
     }
 
     public JButton getSubmitButton() {
