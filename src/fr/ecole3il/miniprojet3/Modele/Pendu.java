@@ -1,4 +1,4 @@
-package fr.ecole3il.miniprojet3.Game;
+package fr.ecole3il.miniprojet3.Modele;
 
 import java.util.ArrayList;
 import java.util.HashSet;
